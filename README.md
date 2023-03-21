@@ -14,7 +14,9 @@ It contans data about the three tables and how they interact with each other.
     To run the back end server run $ rails s.
     This will run on port [http://localhost:3000]
 
-* Configuration
+## VIDEO LINK
+Here is the link [pizza_restaurant][video](https://watch.screencastify.com/v/pnggY2ywBEj2IdjfCtHT)
+
 
 
 
@@ -71,47 +73,7 @@ It contans data about the three tables and how they interact with each other.
     
      Restaurant_pizzas routes; resources :restaurant_pizzas, only: [:create, :index, :destroy]
 
-#### POST / create restaurant_pizza
 
-
-Headers
--------
-Content-Type: application/json
-
-
-Request Body
-------
-{
-   "price" 10,
-  "restaurant_id": 4,
-  "pizza_id": 4,
-}
-
-
-Response Body
--------
-{
-  "id": 4,
-  "price" 10,
-  "restaurant_id": 4,
-  "pizza_id": 4,
-  "created_at": ,
-  "updated_at": 
-}
-
-#### DELETE/ destroy Restaurant_pizza
-
-Making a DELETE request to this route should delete one plant from the database.
-You should return a response of `head :no_content` to indicate a successful
-deletion.
-
-DELETE /restaurant_pizza/:id
-
-
-Response Body
-------
-no content
-```
 
 
 

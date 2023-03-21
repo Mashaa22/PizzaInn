@@ -25,7 +25,7 @@ class RestaurantPizzasController < ApplicationController
             restaurant_pizza.destroy
             head :no_content
         else
-            render json: {error: "RestaurantPizza not found"}, status: :unprocessable_entity
+            render json: {error: "RestaurantPizza not found"}, status: :not_found
         end
     end
 

@@ -34,8 +34,14 @@ class RestaurantsController < ApplicationController
 
     def destroy
         restaurant = Restaurant.find(params[:id])
-        restaurant.destroy
-        head :no_content
+
+        if restaurant
+            restaurant.destroy
+            head :no_content
+        else
+            render json: {error: "Restaurant not created"}, status: :not_found
+        end
+        
     end
     # def destroy
     #     restaurant = find_restaurant

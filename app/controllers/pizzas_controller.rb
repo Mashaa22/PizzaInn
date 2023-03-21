@@ -5,7 +5,7 @@ class PizzasController < ApplicationController
     end
 
     def show
-        pizzas = Pizza.all 
+        pizzas = Pizza.find_by(id: params[:id]) 
         render json: pizzas
     end
     
